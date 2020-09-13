@@ -35,6 +35,6 @@ def dashboard():
 		return render_template("dashboard/dashboard.html")
 	elif request.cookies.get('user') == "d98dbae3555d8c1229fc2db4ad14a391":
 		#admin T!h!%sH@.^&*(/
-		return("flag{W3b_C@che_D3c3pt!0N}")
+		return("flag{XSSI}")
 	else:
 		return("Please login")
