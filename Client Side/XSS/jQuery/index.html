@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$("element[attribute='<img src=x onerror=alert`_Y000!_`>'")
+             $(decodeURIComponent(location.hash))
+            $("#btn").click(
+
+            
+                function () {
+
+                    // Insecure append of Dom
+                    $("#write").append($("#xss").val());
+
+                   
+                    // Insecure set of attribute property
+                    $("#attr").attr("href", (new URLSearchParams(window.location.search)).get('url'));
+
+                    //Insecure creation of tag
+                    //$("#add").add((new URLSearchParams(window.location.search)).get('url') );
+
+                    // innerhtml sink
+                    document.getElementById("demo").innerHTML = (new URLSearchParams(window.location.search)).get('url');
+
+                }
+            );
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" name="xss" id="xss" value="">
+    <button type="button" id="btn" value="click">Click</button>
+    <p id="test">Jquery xss</p>
+    <p id="write">Hello xss</p>
+    <p id="add"></p>
+    <p id="demo"> test</p>
+    <a href="#" id="attr">Home</a>
+
+
+</body>
+
+</html>

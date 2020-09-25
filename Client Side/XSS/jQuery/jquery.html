@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(
+                function () {
+                    $(decodeURIComponent(location.hash))
+
+                    //alert($(decodeURIComponent(location.hash)).val())
+
+                }
+            );
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="name" value="navjeet">
+    <button type="button" id="btn">clickme</button>
+</body>
+
+</html>
