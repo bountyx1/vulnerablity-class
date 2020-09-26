@@ -40,5 +40,3 @@ return userinput
 ```
 - what could possible go wrong?
 - 3rd party library developer build own html santizer
-
---- goottta gooooooo
